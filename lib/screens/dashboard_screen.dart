@@ -446,7 +446,7 @@ bars = sortedEntries
 
   Widget _buildMetricDropdown() {
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 2),
+      padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
       decoration: BoxDecoration(
         border: Border.all(color: AppColors.line),
         borderRadius: BorderRadius.circular(6),
@@ -476,7 +476,10 @@ bars = sortedEntries
   // ─── Graph period filter ──────────────────────────────────────────────────
 
   Widget _buildPeriodFilter() {
-    return Row(
+     return SingleChildScrollView(
+      scrollDirection: Axis.horizontal,
+      child: Row(
+    //return Row(
       children: [
         _periodChip('Month', _GraphPeriod.month),
         _periodChip('Quarter', _GraphPeriod.quarter),
@@ -498,6 +501,7 @@ bars = sortedEntries
           ),
         ),
       ],
+     ),
     );
   }
 
