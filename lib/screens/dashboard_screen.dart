@@ -133,16 +133,15 @@ class _DashboardScreenState extends State<DashboardScreen> {
           //bars = byDay.entries.toList()
           //  ..sort((a, b) => a.key.compareTo(b.key));
           //bars = bars.map((e) => _Bar('${e.key}', metricValue(e.value))).toList();
-          bars = byDay.entries
-  .toList()
-  ..sort((a, b) => a.key.compareTo(b.key));
+          final sortedEntries = byDay.entries.toList()
+          ..sort((a, b) => a.key.compareTo(b.key));
 
-bars = bars
-  .map((e) => _Bar(
-        '${e.key}',   // label
-        e.value,      // List<QuoteDoc>
+         bars = sortedEntries
+           .map((e) => _Bar(
+             '${e.key}',   // label
+              e.value,      // List<QuoteDoc>
       ))
-  .toList();  
+  .toList();
         }
         break;
 
