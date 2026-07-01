@@ -130,9 +130,19 @@ class _DashboardScreenState extends State<DashboardScreen> {
           // chart isn't just empty blank space.
           bars = List.generate(daysInMonth, (i) => _Bar('${i + 1}', 0));
         } else {
-          bars = byDay.entries.toList()
-            ..sort((a, b) => a.key.compareTo(b.key));
-          bars = bars.map((e) => _Bar('${e.key}', metricValue(e.value))).toList();
+          //bars = byDay.entries.toList()
+          //  ..sort((a, b) => a.key.compareTo(b.key));
+          //bars = bars.map((e) => _Bar('${e.key}', metricValue(e.value))).toList();
+          bars = byDay.entries
+  .toList()
+  ..sort((a, b) => a.key.compareTo(b.key));
+
+bars = bars
+  .map((e) => _Bar(
+        '${e.key}',   // label
+        e.value,      // List<QuoteDoc>
+      ))
+  .toList();  
         }
         break;
 
