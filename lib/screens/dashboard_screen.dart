@@ -314,8 +314,8 @@ bars = sortedEntries
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               _buildMetricDropdown(),
-              const Spacer(),
-              _buildPeriodFilter(),
+              const SizedBox(width: 10),
+              Expanded(child: _buildPeriodFilter()),
             ],
           ),
           const SizedBox(height: 10),
