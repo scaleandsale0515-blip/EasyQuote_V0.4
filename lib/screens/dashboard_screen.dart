@@ -473,37 +473,38 @@ bars = sortedEntries
     );
   }
 
-  // ─── Graph period filter ──────────────────────────────────────────────────
+  // ─── Graph period filter ──────────────────────────────────────────────────  [[[[[ UPDATE With AI ]]]]]
 
-  Widget _buildPeriodFilter() {
-     return SingleChildScrollView(
+Widget _buildPeriodFilter() {
+    return SingleChildScrollView(
       scrollDirection: Axis.horizontal,
       child: Row(
-    //return Row(
-      children: [
-        _periodChip('Month', _GraphPeriod.month),
-        _periodChip('Quarter', _GraphPeriod.quarter),
-        _periodChip('Year', _GraphPeriod.year),
-        Padding(
-          padding: const EdgeInsets.only(right: 0),
-          child: ChoiceChip(
-            labelPadding: const EdgeInsets.symmetric(horizontal: 8),
-            padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 8),
-            label: const Text('Custom', style: TextStyle(height: 1.0, fontSize: 11.5)),
-            selected: _graphPeriod == _GraphPeriod.custom,
-            onSelected: (_) {
-              if (_graphPeriod == _GraphPeriod.custom) {
-                setState(() { _graphPeriod = _GraphPeriod.month; _graphCustomRange = null; });
-              } else {
-                _pickGraphCustomRange();
-              }
-            },
+        children: [
+          _periodChip('Month', _GraphPeriod.month),
+          _periodChip('Quarter', _GraphPeriod.quarter),
+          _periodChip('Year', _GraphPeriod.year),
+          Padding(
+            padding: const EdgeInsets.only(right: 0),
+            child: ChoiceChip(
+              labelPadding: const EdgeInsets.symmetric(horizontal: 8),
+              padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 8),
+              label: const Text('Custom', style: TextStyle(height: 1.0, fontSize: 11.5)),
+              selected: _graphPeriod == _GraphPeriod.custom,
+              onSelected: (_) {
+                if (_graphPeriod == _GraphPeriod.custom) {
+                  setState(() { _graphPeriod = _GraphPeriod.month; _graphCustomRange = null; });
+                } else {
+                  _pickGraphCustomRange();
+                }
+              },
+            ),
           ),
-        ),
-      ],
-     ),
+        ],
+      ),
     );
   }
+
+  
 
   Widget _periodChip(String label, _GraphPeriod p) => Padding(
         padding: const EdgeInsets.only(right: 6),
