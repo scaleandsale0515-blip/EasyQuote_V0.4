@@ -40,22 +40,11 @@ class AppTermsScreen extends StatelessWidget {
   }
 
   static final List<_TermsSection> _sections = [
-    _TermsSection(
-      'EDIT BEFORE PUBLISHING THIS NOTICE',
-      'This document is a general-purpose template intended to satisfy the baseline '
-          'requirements of app marketplaces such as Google Play, and to give users a fair, '
-          'plain description of how the App may be used. It is provided for convenience and '
-          'does not constitute legal advice. Before publishing this App to any public app '
-          'store, you should have this text (and the accompanying Privacy Policy) reviewed by '
-          'a qualified legal professional familiar with applicable consumer-protection, '
-          'data-protection, and e-commerce regulations in your jurisdiction, and you should '
-          'insert your own legal entity name, registered address, and contact details wherever '
-          'placeholders such as "[Developer/Company Name]" appear below.',
-    ),
+
     _TermsSection(
       '1. Acceptance of Terms',
       'These Terms & Conditions ("Terms") constitute a legally binding agreement between '
-          'you ("User," "you," or "your") and [Developer/Company Name] ("we," "us," "our," or '
+          'you ("User," "you," or "your") and MR. RUTIK PARMAR ("we," "us," "our," or '
           'the "Developer"), governing your access to and use of the EasyQuote mobile '
           'application (the "App"), including all related documentation, updates, and '
           'associated services. By downloading, installing, accessing, or otherwise using the '
@@ -264,8 +253,8 @@ class AppTermsScreen extends StatelessWidget {
     _TermsSection(
       '15. Contact Information',
       'If you have any questions, concerns, or comments regarding these Terms, please contact '
-          'the Developer at: [Insert Support Email Address Here]. [Developer/Company Name], '
-          '[Insert Registered Business Address, City, State, PIN Code, India].',
+          'the Developer at: scaleandsale0515@gmail.com. MR. RUTIK PARMAR, '
+          'Ahmedabad, Gujarat, 382350, India.',
     ),
   ];
 }
